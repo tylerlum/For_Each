@@ -11,37 +11,14 @@ namespace ForEach
         static void Main(string[] args)
         {
             // Print all names 1
-            List<string> names = new List<string>();
-            names.Add("Steve");
-            names.Add("Jon");
-            names.Add("Mary");
-            names.Add("Julie");
-
-            DisplayName(names);
+            new List<string>() { "Steve", "Jon", "Mary", "Julie" }
+            .ForEach(n => Console.WriteLine(n));
             Console.ReadLine();
-
 
             // Print all names 2
-            List<string> otherNames = new List<string>()
-            {
-                "Tom",
-                "Dick",
-                "Harry"
-            };
-
-            DisplayName(otherNames);
+            new List<string>() { "Tom", "Dick", "Harry" }
+            .ForEach(n => Console.WriteLine(n));
             Console.ReadLine();
-
-
-        }
-
-        static void DisplayName(List<string> names)
-        {
-            foreach (var name in names)
-            {
-                Console.WriteLine(name);
-            }
-            
         }
     }
 }
